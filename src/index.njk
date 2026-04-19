@@ -1,0 +1,173 @@
+---
+layout: base.njk
+title: Sheety KLEIDO
+---
+
+{# ── HERO ── #}
+<section class="hero">
+  <p class="hero-eyebrow">{{ site.eyebrow }}</p>
+  <h1 class="hero-title">{{ site.tagline | replace(" lens", " <em>lens</em>") | safe }}</h1>
+  <p class="hero-sub">{{ site.subheading }}</p>
+  <div class="hero-ctas">
+    <a href="{{ site.assessmentUrl }}" class="btn-primary">Take the free assessment</a>
+    <a href="#dimensions" class="btn-secondary">Explore the dimensions</a>
+  </div>
+
+  {# ── SLIDE VIEWER ── #}
+  <div class="slide-viewer">
+    <div class="slide-viewport" onclick="nextSlide()" title="Click to see next dimension">
+      <div class="slide-track" id="slideTrack">
+        {% for dim in dimensions %}
+        <div class="slide-panel">
+          {% include "patterns/" + dim.key + ".njk" %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="slide-info">
+      <p class="slide-letter" id="slideLetter" style="color: {{ dimensions[0].color }}">{{ dimensions[0].key }}</p>
+      <p class="slide-name"   id="slideName"   style="color: {{ dimensions[0].color }}">{{ dimensions[0].name }}</p>
+      <p class="slide-desc"   id="slideDesc">{{ dimensions[0].description }}</p>
+      <p class="slide-poles"  id="slidePoles">{{ dimensions[0].poles.low }} &nbsp;↔&nbsp; {{ dimensions[0].poles.high }}</p>
+    </div>
+
+    <div class="slide-dots">
+      {% for dim in dimensions %}
+      <button
+        class="slide-dot{% if loop.first %} active{% endif %}"
+        style="{% if loop.first %}background: {{ dim.color }}{% endif %}"
+        onclick="goSlide({{ loop.index0 }})"
+      ></button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ── DIMENSIONS ── #}
+<section class="dims-section" id="dimensions">
+  <div class="dims-inner">
+    <div class="dim-header reveal">
+      <p class="section-label">The six dimensions</p>
+      <h2 class="section-title">What KLEIDO reveals</h2>
+      <p class="section-sub">{{ site.dimensionsSubhead }}</p>
+    </div>
+
+    <div class="dim-grid reveal">
+      {% for dim in dimensions %}
+      <div class="dim-card" data-dim="{{ dim.key }}">
+        <div class="dim-letter" style="color: {{ dim.color }}">{{ dim.key }}</div>
+        <div class="dim-name">{{ dim.name }}</div>
+        <div class="dim-desc">{{ dim.description }}</div>
+        <div class="dim-track" style="background: {{ dim.color }}1a">
+          <div class="dim-thumb" style="background: {{ dim.color }}; left: {{ dim.sample }}%"></div>
+        </div>
+        <div class="dim-poles">
+          <span style="color: {{ dim.color }}">{{ dim.poles.low }}</span>
+          <span style="color: var(--muted)">{{ dim.poles.high }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ── HOW IT WORKS ── #}
+<section id="how">
+  <div class="how-inner">
+    <div class="reveal">
+      <p class="section-label">How it works</p>
+      <h2 class="section-title">Simple. Practical.<br>Actually useful.</h2>
+      <p class="section-sub">No abstract types. No 40-page PDF you'll never read. Just your spectrum and what to do with it.</p>
+    </div>
+    <div class="steps reveal">
+      {% for step in site.steps %}
+      <div class="step">
+        <p class="step-num">{{ step.num }}</p>
+        <p class="step-title">{{ step.title }}</p>
+        <p class="step-desc">{{ step.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ── PROFILE PREVIEW ── #}
+<section class="profile-section">
+  <div class="profile-inner">
+    <div class="reveal">
+      <p class="section-label">Your profile</p>
+      <h2 class="section-title">Your spectrum.<br>Nobody else's.</h2>
+      <p class="section-sub">{{ site.profileSubhead }}</p>
+      <br/>
+      <p class="section-sub" style="font-size: 0.82rem">{{ site.profileAnnotation }}</p>
+    </div>
+
+    <div class="profile-card reveal">
+      <div class="profile-top">
+        <div>
+          <p class="profile-name">Alex M.</p>
+          <p class="profile-tag">KLEIDO Profile · {{ site.year }}</p>
+        </div>
+        <div class="profile-badge">High Autonomy</div>
+      </div>
+      <div>
+        {% for dim in dimensions %}
+        <div class="metric-row">
+          <div class="metric-top">
+            <span class="metric-name" style="color: {{ dim.color }}">{{ dim.key }} — {{ dim.name }}</span>
+            <span class="metric-val">{{ dim.sampleLabel }}</span>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-fill" style="width: {{ dim.sample }}%; background: {{ dim.color }}"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── PRICING ── #}
+<section id="pricing">
+  <div class="pricing-inner">
+    <div class="reveal">
+      <p class="section-label">Pricing</p>
+      <h2 class="section-title">Free to start.<br>Pay only for more.</h2>
+      <p class="section-sub">{{ site.pricingSubhead }}</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+      {% for plan in pricing %}
+      <div class="plan{% if plan.featured %} featured{% endif %}">
+        <span class="plan-badge" style="{% if plan.featured %}background: linear-gradient(135deg, var(--E), var(--D)); color: white{% elif loop.last %}background: rgba(167,139,250,0.12); color: var(--D){% else %}background: rgba(255,255,255,0.05); color: var(--muted){% endif %}">
+          {{ plan.badge }}
+        </span>
+        <p class="plan-name">{{ plan.name }}</p>
+        <p class="plan-price">{{ plan.price }}<span>{% if plan.suffix %} {{ plan.suffix }}{% endif %}</span></p>
+        <p class="plan-desc">{{ plan.desc }}</p>
+        <ul class="plan-features">
+          {% for feature in plan.features %}
+          <li{% if feature.on %} class="on"{% endif %}>{{ feature.text }}</li>
+          {% endfor %}
+        </ul>
+        <a href="{{ site.assessmentUrl }}" class="btn-plan{% if plan.ctaClass %} {{ plan.ctaClass }}{% endif %}">{{ plan.cta }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ── FOOTER CTA ── #}
+<section class="footer-cta">
+  <p class="section-label">Get started</p>
+  <h2 class="section-title reveal">{{ site.footerCta }}</h2>
+  <p class="section-sub reveal">{{ site.footerCtaSub }}</p>
+  <br/>
+  <a href="{{ site.assessmentUrl }}" class="btn-primary reveal">Take the free assessment</a>
+</section>
+
+{# ── Pass dimension data to JS ── #}
+<script>
+  window.KLEIDO_DIMS = {{ dimensions | dump | safe }};
+</script>

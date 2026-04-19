@@ -1,0 +1,52 @@
+[
+  {
+    "name":     "Your Profile",
+    "price":    "$0",
+    "suffix":   "",
+    "badge":    "Always free",
+    "featured": false,
+    "desc":     "Take the assessment and get your full six-dimension KLEIDO spectrum. Yours to keep and share.",
+    "features": [
+      { "on": true,  "text": "Full 6-dimension KLEIDO profile" },
+      { "on": true,  "text": "Plain-language insight report" },
+      { "on": true,  "text": "Practical self-recommendations" },
+      { "on": true,  "text": "Shareable profile link" }
+    ],
+    "cta":      "Take the assessment",
+    "ctaClass": ""
+  },
+  {
+    "name":     "Working With",
+    "price":    "$4",
+    "suffix":   "one-time",
+    "badge":    "One-time unlock",
+    "featured": true,
+    "desc":     "Enter someone else's KLEIDO scores and get a personalised guide for working with them.",
+    "features": [
+      { "on": true, "text": "Relationship archetype" },
+      { "on": true, "text": "Communication style tips" },
+      { "on": true, "text": "Feedback and pressure advice" },
+      { "on": true, "text": "Collaboration and pace guide" },
+      { "on": true, "text": "One person's scores per unlock" }
+    ],
+    "cta":      "Unlock for $4",
+    "ctaClass": "grad"
+  },
+  {
+    "name":     "Group",
+    "price":    "$10",
+    "suffix":   "one-time",
+    "badge":    "One-time unlock",
+    "featured": false,
+    "desc":     "Enter scores for your whole team and receive a full group dynamics report.",
+    "features": [
+      { "on": true, "text": "Team tension and compatibility map" },
+      { "on": true, "text": "Natural roles within the group" },
+      { "on": true, "text": "Meeting structure recommendations" },
+      { "on": true, "text": "Communication gap analysis" },
+      { "on": true, "text": "Up to 10 people per report" }
+    ],
+    "cta":      "Unlock for $10",
+    "ctaClass": ""
+  }
+]

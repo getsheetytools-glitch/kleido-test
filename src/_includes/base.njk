@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ title or site.name }} — Discover How You Work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Sheety <span>KLEIDO</span></div>
+  <ul class="nav-links">
+    <li><a href="#dimensions">Dimensions</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="{{ site.assessmentUrl }}" class="btn-nav">Take the Assessment</a></li>
+  </ul>
+</nav>
+
+{{ content | safe }}
+
+<footer>
+  <div class="footer-brand">Sheety <span>KLEIDO</span></div>
+  <p>{{ site.footerByline }}</p>
+  <p style="font-size:0.72rem">© {{ site.year }} Sheety Tools</p>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

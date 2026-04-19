@@ -1,0 +1,68 @@
+[
+  {
+    "key":         "K",
+    "name":        "Knowledge",
+    "description": "How you take in and apply new information",
+    "poles":       { "low": "Experiential", "high": "Studied" },
+    "color":       "#2dd4bf",
+    "dark":        "#041f1d",
+    "mid":         "#0d9488",
+    "sample":      28,
+    "sampleLabel": "Experiential (28)"
+  },
+  {
+    "key":         "L",
+    "name":        "Load",
+    "description": "How you organise and structure your work",
+    "poles":       { "low": "Fluid", "high": "Systematic" },
+    "color":       "#fbbf24",
+    "dark":        "#1a0e00",
+    "mid":         "#92400e",
+    "sample":      75,
+    "sampleLabel": "Systematic (75)"
+  },
+  {
+    "key":         "E",
+    "name":        "Exchange",
+    "description": "How you give and receive feedback under pressure",
+    "poles":       { "low": "Absorb", "high": "React" },
+    "color":       "#f472b6",
+    "dark":        "#1f0413",
+    "mid":         "#9d174d",
+    "sample":      35,
+    "sampleLabel": "Absorb first (35)"
+  },
+  {
+    "key":         "I",
+    "name":        "Interaction",
+    "description": "Where you draw energy — solo focus or collaboration",
+    "poles":       { "low": "Deep solo", "high": "Collaborative" },
+    "color":       "#34d399",
+    "dark":        "#021a0e",
+    "mid":         "#065f46",
+    "sample":      52,
+    "sampleLabel": "Balanced (52)"
+  },
+  {
+    "key":         "D",
+    "name":        "Drive",
+    "description": "What motivates your best work",
+    "poles":       { "low": "Impact", "high": "Autonomy" },
+    "color":       "#a78bfa",
+    "dark":        "#0f0620",
+    "mid":         "#4c1d95",
+    "sample":      84,
+    "sampleLabel": "Autonomy (84)"
+  },
+  {
+    "key":         "O",
+    "name":        "Output",
+    "description": "Your natural delivery rhythm and pace",
+    "poles":       { "low": "Deep quality", "high": "Fast iteration" },
+    "color":       "#fb923c",
+    "dark":        "#1a0800",
+    "mid":         "#c2410c",
+    "sample":      20,
+    "sampleLabel": "Deep quality (20)"
+  }
+]

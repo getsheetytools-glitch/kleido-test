@@ -1,0 +1,43 @@
+{
+  "name":        "Sheety KLEIDO",
+  "tagline":     "Every person sees through a different lens",
+  "subheading":  "KLEIDO reveals your natural work pattern across six dimensions. Not a type. Not a box. A full spectrum — uniquely yours.",
+  "eyebrow":     "Work style assessment · 6 dimensions",
+
+  "dimensionsSubhead": "Each dimension is a spectrum, not a label. Your KLEIDO profile shows where you naturally fall — and what that means for how you work best.",
+
+  "steps": [
+    {
+      "num":   "01",
+      "title": "Take the assessment",
+      "desc":  "15 minutes. Situational questions, not \"rate yourself 1–5.\" Built around how you actually behave, not how you think you should."
+    },
+    {
+      "num":   "02",
+      "title": "Get your KLEIDO profile",
+      "desc":  "Six dimensions rendered as your unique spectrum — with plain-language insight into what each score means in practice."
+    },
+    {
+      "num":   "03",
+      "title": "Apply it immediately",
+      "desc":  "Practical recommendations for meeting structure, communication style, and focus rhythms — tailored to your specific profile."
+    },
+    {
+      "num":   "04",
+      "title": "Go deeper when you need it",
+      "desc":  "Unlock a Working With guide for one person's scores, or a full Group Dynamics report for your whole team. One-time, no subscription."
+    }
+  ],
+
+  "profileSubhead":    "Your KLEIDO profile is a shareable snapshot — specific enough to actually change how you structure your week, and clear enough for a manager to act on in ten seconds.",
+  "profileAnnotation": "The sample here shows an experiential learner with high systematic Load and strong autonomy Drive — someone who needs space to learn by doing, but wants a clear process once they know the goal.",
+
+  "pricingSubhead": "Your full KLEIDO profile is always free. Unlock deeper insight when you actually need it — no subscriptions, no commitment.",
+
+  "footerCta":    "Ready to share your lens?",
+  "footerCtaSub": "Free to take. 15 minutes. You'll actually use what you find.",
+  "footerByline": "A practical work style assessment by Sheety Tools",
+
+  "assessmentUrl": "#",
+  "year": "2025"
+}
